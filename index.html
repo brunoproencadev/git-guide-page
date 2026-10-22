@@ -4,11 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Git Guide</title>
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <p class="sticker-title"> GIT-GUIDE-PAGE</p>
+            <h1>SEU GUIA <br>PRÁTICO DE <span>git</span></h1>
+            <p class="subtitle">Aprenda a versionar seu código</p>
+        </div>
 
+        <nav class="nav">
+            <ul class="list-menu">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="pages/biografia.html">Biografia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>Guia Básico e Prático de Git</h2>
+                <p>O Git é um sistema de controle de versão distribuído essencial para o desenvolvimento de software.
+                    Confira os comandos mais utilizados no dia a dia:</p>
+
+                <article>
+                    <h3>1. Configuração Inicial</h3>
+                    <p>Configure seu nome e email antes de começar a fazer commits:</p>
+                    <pre><code>git config --global user.name "Seu Nome"
+                                     git config --global user.email "seu.email@exemplo.com"</code></pre>
+                </article>
+
+                <article>
+                    <h3>2. Criando ou Clonando Repositórios</h3>
+                    <p>Inicie um repositório local ou clone um projeto existente:</p>
+                    <pre><code># Iniciar repositório na pasta atual
+git init
+
+# Clonar repositório remoto
+git clone https://github.com/usuario/repositorio.git</code></pre>
+                </article>
+
+                <article>
+                    <h3>3. Ciclo de Trabalho Básico</h3>
+                    <p>Verifique alterações, adicione ao stage e crie um commit:</p>
+                    <pre><code># Ver status dos arquivos alterados
+git status
+
+# Adicionar arquivos específicos ou todos
+git add nome-do-arquivo.extensao
+git add .
+
+# Gravar alterações com uma mensagem descritiva
+git commit -m "Mensagem descrevendo a alteração"</code></pre>
+                </article>
+
+                <article>
+                    <h3>4. Sincronizando com Repositório Remoto</h3>
+                    <p>Envie ou puxe atualizações do GitHub/remoto:</p>
+                    <pre><code># Conectar repositório local a um remoto
+git remote add origin https://github.com/usuario/repositorio.git
+
+# Enviar alterações (ramo main)
+git push -u origin main
+
+# Puxar atualizações mais recentes do remoto
+git pull</code></pre>
+                </article>
+
+                <article>
+                    <h3>5. Trabalhando com Branches (Ramificações)</h3>
+                    <p>Crie novas branches para desenvolver funcionalidades isoladas:</p>
+                    <pre><code># Listar branches
+git branch
+
+# Criar e alternar para uma nova branch
+git checkout -b feature-nova
+# ou com versão moderna:
+git switch -c feature-nova
+
+# Voltar para a branch principal
+git checkout main
+# ou:
+git switch main
+
+# Mesclar alterações da branch para a branch atual
+git merge feature-nova</code></pre>
+                </article>
+
+                <article>
+                    <h3>6. Histórico e Logs</h3>
+                    <p>Visualize os commits anteriores:</p>
+                    <pre><code># Histórico completo
+git log
+
+# Histórico resumido em uma linha por commit
+git log --oneline</code></pre>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
